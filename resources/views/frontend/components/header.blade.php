@@ -63,10 +63,16 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    @php
-                        $companyLogo = App\Models\CompanyLogo::latest()->first();
-                    @endphp
+                   @php
+                    $companyLogo = App\Models\CompanyLogo::latest()->first();
+                @endphp
+
+                @if($companyLogo)
                     <a href="{{ route('home') }}"><img src="{{url('/public/uploads/',$companyLogo->image)}}" alt=""></a>
+                @else
+                    <a href="{{ route('home') }}"><img src="{{url('/path/to/default/logo.png')}}" alt="Default Logo"></a>
+                @endif
+
                 </div>
             </div>
             <div class="col-lg-6">
