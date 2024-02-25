@@ -23,6 +23,7 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 
@@ -160,5 +161,8 @@ Route::get('/report/search',[ReportController::class,'reportSearch'])->name('ord
 
 Route::get('/contact-list',[ContactController::class,'contactlist'])->name('contact.list');
 Route::get('/contact-view/{id}',[ContactController::class,'contactview'])->name('contact.view');
+
+//FAQ
+Route::resource('/faq',FAQController::class);
 
 });

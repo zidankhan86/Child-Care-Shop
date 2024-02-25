@@ -82,6 +82,11 @@
                     User Feedback
                 </a>
 
+                <a class="nav-link" href="{{route('faq.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fa fa-question-circle"></i></div>
+                    FAQ
+                </a>
+
                 <a class="nav-link" href="{{route('report')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-print"></i></div>
                     Print Report
