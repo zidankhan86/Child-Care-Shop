@@ -16,6 +16,5 @@
  @include('frontend.pages.product.latest-product-squad')
  @include('frontend.components.banner')
  <livewire:trending-product/>
- 
 
 @endsection

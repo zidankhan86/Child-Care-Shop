@@ -20,9 +20,7 @@
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="{{route('category.list')}}"> Category</a>
                     </nav>
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{route('sub.category.form')}}">Sub Category</a>
-                    </nav>
+                    
                 </div>
 
 
@@ -78,11 +76,6 @@
                     </nav>
 
                 </div>
-
-                <a class="nav-link" href="{{route('blog.list')}}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-blog"></i></div>
-                    Blogs
-                </a>
 
                 <a class="nav-link" href="{{route('contact.list')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-comment"></i></div>
