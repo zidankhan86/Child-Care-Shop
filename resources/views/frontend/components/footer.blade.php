@@ -10,7 +10,7 @@
                     <ul>
                         <li>Address: </li>
                         <li>Phone: 01711111111</li>
-                        <li>Email: eCommerce@gmail.com</li>
+                        <li>Email:ChildCareShop@gmail.com</li>
                     </ul>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="col-lg-12">
                 <div class="footer__copyright">
                     <div class="footer__copyright__text"><p>
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  by Zidan eCommerce
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  by ChildCareShop
 </p></div>
                     <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
                 </div>

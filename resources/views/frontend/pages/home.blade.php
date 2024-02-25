@@ -3,9 +3,9 @@
   @section('content')
 
   <!-- Page Preloder -->
-  {{-- <div id="preloder">
+<div id="preloder">
     <div class="loader"></div>
-</div> --}}
+</div> 
 
  @include('frontend.components.navLayer')
  @include('frontend.components.hero')
@@ -16,6 +16,6 @@
  @include('frontend.pages.product.latest-product-squad')
  @include('frontend.components.banner')
  <livewire:trending-product/>
- @include('frontend.components.blog')
+ 
 
 @endsection

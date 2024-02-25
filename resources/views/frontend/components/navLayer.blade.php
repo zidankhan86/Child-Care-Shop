@@ -26,7 +26,7 @@
      </div>
      <div class="humberger__menu__contact">
          <ul>
-             <li><i class="fa fa-envelope"></i> eCommerce@gmail.com</li>
+             <li><i class="fa fa-envelope"></i> ChildCareShop@gmail.com</li>
              <li>Free Shipping for all Order of 10000 Tk</li>
          </ul>
      </div>
