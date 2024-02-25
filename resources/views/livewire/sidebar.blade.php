@@ -97,7 +97,7 @@
                   <small>Doctor Management</small>
                 </a>
 
-                <a class="nav-link" href="{{route('report')}}">
+                <a class="nav-link" href="{{route('location.create')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-location"></i></div>
                     Location
                 </a>
