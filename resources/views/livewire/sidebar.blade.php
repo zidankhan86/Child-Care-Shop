@@ -82,7 +82,7 @@
                     User Feedback
                 </a>
 
-                <a class="nav-link" href="{{route('faq.index')}}">
+                <a class="nav-link" href="{{route('faq.create')}}">
                     <div class="sb-nav-link-icon"><i class="fa fa-question-circle"></i></div>
                     FAQ
                 </a>
