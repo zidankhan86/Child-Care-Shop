@@ -9,8 +9,8 @@
                     <div class="container">
                          <div class="container">
                         <div>
-                        <br><a class="btn btn-success float-end ml-2" href="{{ route('location.index') }}"><i class="fa-solid fa-plus"></i> Add FAQ</a>
-                        <br><h4 class="text-success text-center">FAQ List</h4><br>
+                        <br><a class="btn btn-success float-end ml-2" href="{{ route('location.index') }}"><i class="fa-solid fa-plus"></i> Add Location</a>
+                        <br><h4 class="text-success text-center">Location List</h4><br>
                         </div>
 
                        <table class="table">

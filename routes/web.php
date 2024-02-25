@@ -26,10 +26,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
-
-
-
-
+use App\Http\Controllers\LocationController;
 
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 //hero
@@ -164,5 +161,5 @@ Route::get('/contact-view/{id}',[ContactController::class,'contactview'])->name(
 
 //FAQ
 Route::resource('/faq',FAQController::class);
-
+Route::resource('/location',LocationController::class);
 });
