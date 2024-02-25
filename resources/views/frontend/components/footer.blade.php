@@ -11,7 +11,7 @@
                         <a href="{{ route('home') }}"><img src="{{url('/public/uploads/',$companyLogo->image)}}" alt=""></a>
                     </div>
                     <ul>
-                        <li>Address: </li>
+                        
                         <li>Phone: 01711111111</li>
                         <li>Email:ChildCareShop@gmail.com</li>
                     </ul>
@@ -22,20 +22,15 @@
                     <h6>Useful Links</h6>
                     <ul>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">About Our Shop</a></li>
-                        <li><a href="#">Secure Shopping</a></li>
-                        <li><a href="#">Delivery infomation</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Our Sitemap</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Product</a></li>
+                       
                     </ul>
                     <h6>Useful Links</h6>
                     <ul>
-                        <li><a href="#">Who We Are</a></li>
-                        <li><a href="#">Our Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Innovation</a></li>
-                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">DOCTOR</a></li>
+                       
                     </ul>
                 </div>
             </div>
