@@ -35,8 +35,8 @@ if ($request->hasFile('image')) {
     $file->storeAs('uploads', $imageName, 'public');
 }
 
-// dd($imageName);
-//dd($request->all());
+    // dd($imageName);
+    //dd($request->all());
 
     CompanyLogo::create([
 
@@ -46,15 +46,17 @@ if ($request->hasFile('image')) {
     ]);
 
     return back()->with('success','Logo Uploaded Successfully!');
-
-
+ 
    }
+
    public function LogoDelete($id)
    {
     $delete = CompanyLogo::find($id);
     $delete->delete();
-    return back();
+
+    return back()->with('success','Deleted!');
    }
+
    public function LogoList()
    {
     $logo = CompanyLogo::all();

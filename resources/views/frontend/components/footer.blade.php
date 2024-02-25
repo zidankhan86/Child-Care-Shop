@@ -4,8 +4,11 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about">
+                    @php
+                        $companyLogo = App\Models\CompanyLogo::latest()->first();
+                    @endphp
                     <div class="footer__about__logo">
-                        <a href="{{ route('home') }}"><img src="{{url('frontend/img/logo.png')}}" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{url('/public/uploads/',$companyLogo->image)}}" alt=""></a>
                     </div>
                     <ul>
                         <li>Address: </li>
@@ -25,6 +28,7 @@
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Our Sitemap</a></li>
                     </ul>
+                    <h6>Useful Links</h6>
                     <ul>
                         <li><a href="#">Who We Are</a></li>
                         <li><a href="#">Our Services</a></li>

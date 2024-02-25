@@ -38,8 +38,6 @@ Route::get('/product',[FrontendProductController::class,'product']);
 Route::get('/product-details/{id}',[FrontendProductController::class,'productDetails'])->name('details');
 Route::get('/search',[SearchController::class,'search'])->name('user.search');
 //Blog
-Route::get('/blog',[BlogController::class,'blog'])->name('blog');
-Route::get('/blog-page',[BlogController::class,'blogPage']);
 Route::post('/comment-store',[CommentController::class,'commentStore'])->name('commentStore');
 //CategoryWiseProduct
 Route::get('/category/{id}',[FrontendHomeController::class,'categoryWiseProduct']);
@@ -145,14 +143,8 @@ Route::get('/banner-edit/{id}',[BannerController::class,'banneredit'])->name('ba
 //Logo
 Route::get('/logo-form',[CompanyLogoController::class,'LogoForm'])->name('logo.form');
 Route::post('/logo-store',[CompanyLogoController::class,'LogoStore'])->name('logo.store');
-Route::get('/logo-delete',[CompanyLogoController::class,'LogoDelete'])->name('logo.delete');
+Route::get('/logo-delete/{id}', [CompanyLogoController::class, 'LogoDelete'])->name('logo.delete');
 Route::get('/logo-list',[CompanyLogoController::class,'LogoList'])->name('logo.list');
-
-//Blog
-Route::get('/blog-form',[BlogController::class,'blogPost'])->name('blog.post');
-Route::post('/blog-store',[BlogController::class,'blogStore'])->name('blog.store');
-Route::get('/blog-list',[BlogController::class,'bloglist'])->name('blog.list');
-Route::get('/blog-delete/{id}',[BlogController::class,'blogdelete'])->name('blog.delete');
 
 //Hero
 Route::get('/hero-form',[HeroBannerController::class,'heroPost'])->name('hero.post');

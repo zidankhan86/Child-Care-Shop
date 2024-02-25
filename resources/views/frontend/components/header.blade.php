@@ -42,19 +42,17 @@
 
 
                         <div class="header__top__right__auth">
-                            @auth
-                            @if (auth()->user()->role == 'customer')
+                        @auth
+                          @if (auth()->user()->role == 'customer')
                             <a href="{{ route('logout') }}"><i class="fa fa-user"></i> Logout</a>
-                            @endif
-                            @endauth
+                          @endif
+                        @endauth
 
-
-                             @auth
-                             @else
+                        @auth
+                            @else
                             <a href="{{ route('login.frontend') }}"><i class="fa fa-user"></i> Login</a>
-                             @endauth
+                          @endauth
                         </div>
-
 
                     </div>
                 </div>
@@ -65,7 +63,10 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="{{ route('home') }}"><img src="{{url('frontend/img/logo.png')}}" alt=""></a>
+                    @php
+                        $companyLogo = App\Models\CompanyLogo::latest()->first();
+                    @endphp
+                    <a href="{{ route('home') }}"><img src="{{url('/public/uploads/',$companyLogo->image)}}" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -73,7 +74,7 @@
                     <ul>
                         <li class="active"><a href="{{url('/')}}">Home</a></li>
                         <li><a href="{{url('/product')}}">Shop</a></li>
-                        <li><a href="{{url('/blog-page')}}">Blog</a></li>
+                        <li><a href="">Doctor</a></li>
                         <li><a href="{{url('/contact')}}">Contact</a></li>
                     </ul>
                 </nav>
