@@ -24,6 +24,7 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\frontend\faqController as FrontendFaqController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\LocationController;
@@ -31,6 +32,9 @@ use App\Http\Controllers\LocationController;
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 //hero
 Route::get('/hero',[HeroBannerController::class,'hero']);
+
+//FAQ
+Route::get('/faq-home',[FrontendFaqController::class,'faqHome'])->name('faq.home');
 //product
 Route::get('/product',[FrontendProductController::class,'product']);
 Route::get('/product-details/{id}',[FrontendProductController::class,'productDetails'])->name('details');

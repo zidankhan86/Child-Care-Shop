@@ -93,13 +93,17 @@
                 </a>
                 <hr>
                   <a class="nav-link">
-                    <div class="sb-nav-link-icon"><i class="fas fa-user-md"></i></div>
+                    <div class="sb-nav-link-icon"></div>
                   <small>Doctor Management</small>
                 </a>
 
                 <a class="nav-link" href="{{route('location.create')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-location"></i></div>
                     Location
+                </a>
+                <a class="nav-link" href="{{route('location.create')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user-md"></i></div>
+                    Doctor
                 </a>
                 <hr>
                 <a class="nav-link" href="{{route('sub.category.form')}}">

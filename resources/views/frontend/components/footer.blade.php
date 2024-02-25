@@ -28,7 +28,7 @@
                     </ul>
                     <h6>Useful Links</h6>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="{{route('faq.home')}}">FAQ</a></li>
                         <li><a href="#">DOCTOR</a></li>
                        
                     </ul>
