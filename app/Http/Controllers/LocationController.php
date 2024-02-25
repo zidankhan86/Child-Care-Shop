@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\location;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LocationController extends Controller
 {
@@ -29,7 +31,21 @@ class LocationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'location'      =>'required|unique:locations,location,except,id'
+           
+        ]);
+
+    if ($validator->fails()) {
+
+        return redirect()->back()->withErrors($validator)->withInput();
+    }
+        location::create([
+            "location"=>$request->location
+
+        ]);
+        Alert::toast()->success('Location Added');
+        return back();
     }
 
     /**
