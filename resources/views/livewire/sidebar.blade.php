@@ -92,6 +92,16 @@
                     Print Report
                 </a>
                 <hr>
+                  <a class="nav-link">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user-md"></i></div>
+                  <small>Doctor Management</small>
+                </a>
+
+                <a class="nav-link" href="{{route('report')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-location"></i></div>
+                    Location
+                </a>
+                <hr>
                 <a class="nav-link" href="{{route('sub.category.form')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-cog"></i></div>
                     Settings
