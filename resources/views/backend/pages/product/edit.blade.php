@@ -32,7 +32,7 @@
 
          <div class="mb-3 mx-sm-2">
         <label for="exampleInputName1" class="form-label">Product stock</label>
-        <input type="text" class="form-control" value="{{$edit->product_stock}}" id="exampleInputName1" name="product_stock" placeholder="Product Name..">
+        <input type="text" class="form-control" value="{{$edit->stock}}" id="exampleInputName1" name="product_stock" placeholder="Product Name..">
         @error('product_stock')
 
         <strong class="text-danger">{{$message}}</strong>
@@ -112,7 +112,7 @@
 
              <div class="mb-3 mx-sm-2">
             <label for="exampleInputNumber3" class="form-label">Shipping time</label>
-            <input type="number" class="form-control" id="exampleInputNumber3" name="time"  value="{{$edit->time}}" placeholder="3 days in Dhaka..">
+            <input type="date" class="form-control" id="datepicker" name="time"  value="{{$edit->time}}" placeholder="3 days in Dhaka..">
             @error('time')
 
                 <strong class="text-danger">{{$message}}</strong>
@@ -175,6 +175,22 @@
     }
     });
     </script>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Bootstrap Datepicker -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('#datepicker').datepicker({
+        format: 'yyyy-mm-dd', // Set the format to match your database date format
+        autoclose: true
+    });
+});
+</script>
 
 @endsection
 

@@ -65,7 +65,7 @@
             <div class="">
             <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>
-            <i class="fas fa-action"></i> </button>
+            <i class="far fa-calendar-check"></i> </button>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ route('trending.status', ['id' => $item->id]) }}">
                 <i class="fas fa-arrow-up"></i> Trending
