@@ -147,7 +147,7 @@
                     <option value="1">Active</option>
                 </select>
 
-                @error('time')
+                @error('status')
 
                     <strong class="text-danger">{{$message}}</strong>
 
