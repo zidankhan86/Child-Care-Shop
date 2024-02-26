@@ -16,7 +16,7 @@ class CompanyLogoController extends Controller
    {
     $validator = Validator::make($request->all(), [
         'tittle' => 'nullable',
-        'image' => 'required|max:200',
+        'image' => 'required|max:500',
     ]);
 
 if ($validator->fails()) {
