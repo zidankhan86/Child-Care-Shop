@@ -82,64 +82,7 @@ class ProductController extends Controller
 
         }
 
-        public function NewArrivalproductForm(){
-
-            return view('backend.pages.product.newArrivalProductForm');
-        }
-
-          public function newProductStore(Request $request){
-
-
-
-           // dd($request->all());
-
-            $validator = Validator::make($request->all(), [
-                'name' => 'required|string',
-                'image' => 'nullable',
-                'weight' => 'required|numeric',
-                'stock' => 'required|integer',
-                'price' => 'required|numeric',
-                //'discount' => 'nullable|numeric|max:100',
-                'time' => 'required',
-                'description' => 'required',
-
-            ]);
-
-            if ($validator->fails()) {
-                return redirect()->back()->withErrors($validator)->withInput();
-            }
-
-
-        //dd($request->all());
-
-        $imageName=null;
-        if ($request->hasFile('image')) {
-            $imageName=date('Ymdhsis').'.'.$request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('uploads', $imageName, 'public');
-
-
-           // dd($imageName);
-        }
-
-              NewArrival::create([
-
-             "name"=>$request->name,
-             "image"=>$imageName,
-             "weight"=>$request->weight,
-             "stock"=>$request->stock,
-             "price"=>$request->price,
-             "discount"=>$request->discount,
-             "time"=>$request->time,
-             "description"=>$request->description,
-          ]);
-          return back()->with('success', 'New Arrival Added Successfully!');
-    }
-
-    public function NewArrivalproductList(){
-        $products = NewArrival::latest()->get();
-        return view('backend.pages.product.newArrivalProductList',compact('products'));
-    }
-
+        
 
         public function productList(){
 

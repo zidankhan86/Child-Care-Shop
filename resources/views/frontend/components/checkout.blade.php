@@ -1,12 +1,7 @@
 <!DOCTYPE html>
   <html lang="zxx">
 
-
-
   <body>
-
-
-
 
       <!-- Checkout Section Begin -->
       <section class="checkout spad">
@@ -28,7 +23,7 @@
                 @endif
                   <h4>Billing Details</h4>
 
-                  <form action="{{route('product.order.store',$products->id)}}" method="POST" enctype="multipart/form-data">
+                  <form action="{{route('pay',$products->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                       <div class="row">
                           <div class="col-lg-8 col-md-6">
@@ -76,12 +71,10 @@
 
                                   <input type="text" placeholder="Apartment, suite, unite ect (optinal)" name="address">
 
-
-
                               </div>
 
 
-
+                            <input type="hidden" name="total_price" value="{{ $products->id }}">
 
                               <input type="hidden" name="total_price" value="{{ $subtotal }}">
 
@@ -121,12 +114,6 @@
                                   </div>
 
 
-
-
-
-
-
-
                                   <div class="col-lg-6">
                                       <div class="checkout__input">
                                           <p>Email<span>*</span></p>
@@ -155,8 +142,6 @@
                                       placeholder="Notes about your order, e.g. special notes for delivery.">
                               </div>
                               </div>
-
-
 
 
                         <div class="col-lg-4 col-md-6">

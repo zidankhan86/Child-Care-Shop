@@ -2,12 +2,14 @@
 
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CommentController;
@@ -15,30 +17,41 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\AddToCartController;
 use App\Http\Controllers\HeroBannerController;
 use App\Http\Controllers\CompanyLogoController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\FAQController;
 use App\Http\Controllers\frontend\faqController as FrontendFaqController;
 use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
+use App\Http\Controllers\frontend\DoctorController as FrontendDoctorController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
-use App\Http\Controllers\LocationController;
+
+Route::post('/pay/{id}', [SslCommerzPaymentController::class, 'index'])->name('pay');
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
 
 Route::get('/',[FrontendHomeController::class,'home'])->name('home');
 //hero
 Route::get('/hero',[HeroBannerController::class,'hero']);
-
+//Doctor
+Route::get('/doctor',[FrontendDoctorController::class,'doctor'])->name('doctor');
 //FAQ
 Route::get('/faq-home',[FrontendFaqController::class,'faqHome'])->name('faq.home');
 //product
 Route::get('/product',[FrontendProductController::class,'product']);
 Route::get('/product-details/{id}',[FrontendProductController::class,'productDetails'])->name('details');
-Route::get('/search',[SearchController::class,'search'])->name('user.search');
+Route::get('/search',[SearchController::class,'search'])->name('user.search'); 
+Route::get('/search/doctor',[SearchController::class,'doctorSearch'])->name('doctor.search');
 //Blog
 Route::post('/comment-store',[CommentController::class,'commentStore'])->name('commentStore');
 //CategoryWiseProduct
@@ -166,4 +179,5 @@ Route::get('/contact-view/{id}',[ContactController::class,'contactview'])->name(
 //FAQ
 Route::resource('/faq',FAQController::class);
 Route::resource('/location',LocationController::class);
+Route::resource('/doctor',DoctorController::class);
 });

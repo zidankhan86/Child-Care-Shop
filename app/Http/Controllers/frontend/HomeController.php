@@ -18,10 +18,6 @@ class HomeController extends Controller
 {
     public function home(){
 
-
-          //Blog
-          $blogs = Blog::all();
-
           //Banner
           $banners = Banner::all();
           $bannersOne = BannerOne   ::all();
@@ -49,7 +45,7 @@ class HomeController extends Controller
          $trendingProduct = Product::where('status',2)->latest()->limit(8)->get();
          return view('frontend.pages.home',
          compact('categories','products','latestProducts',
-        'latestCategories','blogs','banners','heroBanners',
+        'latestCategories','banners','heroBanners',
         'bannersTwo','bannersOne','subcategories','productRatings','trendingProduct'));
     }
 

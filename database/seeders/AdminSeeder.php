@@ -21,5 +21,17 @@ class AdminSeeder extends Seeder
             "password"  =>'12345'
         
                     ]);
+
+
+          
+            User::create([
+            "name"      => "Customer",
+            "email"     => "c@gmail.com",
+            "phone"     => "01712345679",
+            "address"   => "Dhanmondi",
+            "role"      => "customer",
+            "password"  => '12345',
+             ]);
+                    
     }
 }

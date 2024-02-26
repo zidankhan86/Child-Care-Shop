@@ -70,7 +70,7 @@
                 @if($companyLogo)
                     <a href="{{ route('home') }}"><img src="{{url('/public/uploads/',$companyLogo->image)}}" alt=""></a>
                 @else
-                    <a href="{{ route('home') }}"><img src="{{url('/path/to/default/logo.png')}}" alt="Default Logo"></a>
+                    <a href="{{ route('home') }}"><img src="{{url('/path/to/default/logo.png')}}" alt="Inseart a Logo"></a>
                 @endif
 
                 </div>
@@ -80,7 +80,7 @@
                     <ul>
                         <li class="active"><a href="{{url('/')}}">Home</a></li>
                         <li><a href="{{url('/product')}}">Shop</a></li>
-                        <li><a href="">Doctor</a></li>
+                        <li><a href="{{route('doctor')}}">Doctor</a></li>
                         <li><a href="{{url('/contact')}}">Contact</a></li>
                     </ul>
                 </nav>

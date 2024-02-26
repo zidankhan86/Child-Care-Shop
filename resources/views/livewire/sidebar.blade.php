@@ -101,7 +101,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-location"></i></div>
                     Location
                 </a>
-                <a class="nav-link" href="{{route('location.create')}}">
+                <a class="nav-link" href="{{route('doctor.create')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user-md"></i></div>
                     Doctor
                 </a>

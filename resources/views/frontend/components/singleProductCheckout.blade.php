@@ -17,7 +17,7 @@
                 <p class="alert alert-success">{{ session('success') }}</p>
                 @endif
                 <h4>Billing Details</h4>
-                <form action="{{ route('product.order.store', $product->id) }}" method="POST"
+                <form action="{{ route('pay', $product->id) }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="row">

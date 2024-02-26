@@ -24,6 +24,10 @@ return new class extends Migration
             $table->string('note')->nullable();
             $table->decimal('total_price')->default(0.00)->nullable();
             $table->string('name')->nullable();
+            $table->string('transaction_id');
+            $table->string('amount');
+            $table->string('currency');
+            $table->string('status');
             $table->timestamps();
         });
     }
