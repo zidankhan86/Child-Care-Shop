@@ -82,6 +82,7 @@
                         <li><a href="{{url('/product')}}">Shop</a></li>
                         <li><a href="{{route('doctor')}}">Doctor</a></li>
                         <li><a href="{{url('/contact')}}">Contact</a></li>
+                        <li><a href="{{url('/faq-home')}}">FAQ</a></li>
                     </ul>
                 </nav>
             </div>

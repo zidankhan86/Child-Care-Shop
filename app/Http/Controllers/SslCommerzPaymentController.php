@@ -132,7 +132,7 @@ class SslCommerzPaymentController extends Controller
             #That means something wrong happened. You can redirect customer to your product page.
             echo "Invalid Transaction";
         }
-        notify()->success('Success', 'Thank You For Booking');
+        notify()->success('Success', 'Thank You For Order');
         return redirect()->back();
 
     }
