@@ -6,6 +6,7 @@ use App\Models\Doctor;
 use App\Models\location;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DoctorController extends Controller
 {
@@ -14,7 +15,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        //
+        $doctor = Doctor::all();
+        return view('backend.pages.doctor.doctor-list',compact('doctor'));
     }
 
     /**
@@ -94,8 +96,14 @@ class DoctorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Doctor $doctor)
+    public function destroy($id)
     {
-        //
+        $delete =  Doctor::find($id);
+        $delete->delete();
+
+
+        Alert::toast('Deleted! Doctor Deleted!');
+
+        return redirect()->back();
     }
 }

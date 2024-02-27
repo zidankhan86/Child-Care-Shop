@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h2>More To Love</h2>
+                    <h2>BUY ANYTHING FOR YOUR BABY</h2>
                 </div>
                 <div class="featured__controls">
 

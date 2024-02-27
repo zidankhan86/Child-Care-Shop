@@ -56,7 +56,7 @@
 
                 <a class="nav-link collapsed" href="" data-bs-toggle="collapse" data-bs-target="#collapseBanners" aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-feather"></i></div>
-                    Banners
+                    Banners Setup
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapseBanners" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -101,7 +101,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-location"></i></div>
                     Location
                 </a>
-                <a class="nav-link" href="{{route('doctor.create')}}">
+                <a class="nav-link" href="{{route('doctor.index')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user-md"></i></div>
                     Doctor
                 </a>
