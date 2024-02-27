@@ -75,7 +75,7 @@
 
 
                             <input type="hidden" name="total_price" value="{{ $products->id }}">
-
+                            <input type="hidden" name="total_price" value="{{ $products->name }}">
                               <input type="hidden" name="total_price" value="{{ $subtotal }}">
 
                               <div class="checkout__input">

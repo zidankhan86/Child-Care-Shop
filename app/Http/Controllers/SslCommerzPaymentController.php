@@ -54,7 +54,7 @@ class SslCommerzPaymentController extends Controller
         $post_data['ship_country'] = "Bangladesh";
 
         $post_data['shipping_method'] = "NO";
-        $post_data['product_name'] = "Computer";
+        $post_data['product_name'] = $product->name;
         $post_data['product_category'] = "Goods";
         $post_data['product_profile'] = "physical-goods";
 
@@ -78,7 +78,8 @@ class SslCommerzPaymentController extends Controller
                 'city' => $post_data['cus_city'],
                 'postcode' => $post_data['cus_postcode'],
                 'transaction_id' => $post_data['tran_id'],
-                'currency' => $post_data['currency']
+                'currency' => $post_data['currency'],
+                'name' => $post_data['product_name']
             ]);
 
         $sslc = new SslCommerzNotification();
