@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Title;
 use App\Models\Product;
+use Database\Seeders\FAQSeeder;
 use Illuminate\Database\Seeder;
 use Database\Seeders\HeroSeeder;
 use Database\Seeders\LogoSeeder;
@@ -40,6 +41,7 @@ class DatabaseSeeder extends Seeder
             FirstBanner::class,
             SecondBannerSeeder::class,
             LogoSeeder::class,
+            FAQSeeder::class
             
         ]);
     }
