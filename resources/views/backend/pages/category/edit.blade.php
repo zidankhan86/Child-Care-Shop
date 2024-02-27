@@ -7,7 +7,7 @@
 <div class="container">
 
 
-<br><h4 class=" text-success text-center">Category Form</h4>
+<br><h4 class=" text-success text-center">Category Edit</h4>
 
 <form action="{{route('category.update',$edit->id)}}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -16,18 +16,6 @@
         <p class="alert alert-success"> {{session('success')}}</p>
          @endif
 
-
-
-
-        <div class="mb-3 mx-sm-2">
-        <label for="exampleInputName1" class="form-label">Category Name</label>
-        <input type="text" value="{{ $edit->name }}" class="form-control" id="exampleInputName1" name="name" placeholder="Category Name..">
-        @error('name')
-
-        <strong class="text-danger">{{$message}}</strong>
-
-        @enderror
-         </div>
 
         <div class="mb-3 mx-sm-2">
         <label for="exampleInputName2" class="form-label">Category Type</label>

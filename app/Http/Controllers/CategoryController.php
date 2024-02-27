@@ -57,9 +57,9 @@ class CategoryController extends Controller
     public function categorupdate(Request $request ,$id){
   // dd($request->all());
   $validator = Validator::make($request->all(), [
-    'name' => 'required|string',
-    'type' => 'required|string|unique:categories',
-            'status'=>'required'
+            
+            'type'  =>'nullable',
+            'status'=>'nullable'
         ]);
 
         if ($validator->fails()) {
@@ -71,7 +71,6 @@ class CategoryController extends Controller
         $update = Category::find($id);
         $update->update([
 
-            "name"=>$request->name,
             "type"=>$request->type,
             "status"=>$request->status
 
@@ -87,40 +86,6 @@ class CategoryController extends Controller
 
         return back();
     }
-    public function SubcategoryForm(){
-        $category=Category::all();
-        return view('backend.pages.category.subCategory',compact('category'));
-    }
-
-    public function subCategoryStore(Request $request){
-          //dd($request->all());
-         $validator = Validator::make($request->all(), [
-            'sub_cat_type' => 'required|unique:sub_categories',
-            'type' => 'required',
-            'category_id'=>'required',
-            'status'=>'required'
-        ]);
-
-    if ($validator->fails()) {
-
-        Alert::toast()->error('Failed');
-        return redirect()->back()->withErrors($validator)->withInput();
-    }
-
-        //dd($request->all());
-
-        SubCategory::create([
-
-
-            "sub_cat_type"=>$request->sub_cat_type,
-            "type"=>$request->type,
-            "category_id"=>$request->category_id,
-            "status"=>$request->status
-
-        ]);
-
-        return back()->with('success', 'Sub Category Added Successfully');
-    }
-
+   
 
 }
