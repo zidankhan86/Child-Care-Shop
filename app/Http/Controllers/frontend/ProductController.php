@@ -104,12 +104,11 @@ class ProductController extends Controller
 
 
 
-        $admins = User::where('role', 'admin')->get(); 
+        $admins = User::where('role', 'customer')->get(); 
          Notification::send($admins, new OrderReceivedNotification($order));
 
        $order->save();
 
-        session()->forget('cart');
 
         notify()->success('Success, Order Confirmed!');
 

@@ -33,7 +33,7 @@
         <thead>
         <tr>
 
-            <th scope="col">Serial</th>
+            <th scope="col">SL</th>
             <th scope="col">Product</th>
             <th scope="col">Total</th>
             <th scope="col">F Name</th>
@@ -58,7 +58,7 @@
 
             <th scope="row">{{ $key+1 }}</th>
             <td>{{ $order->name }}</td>
-            <td>{{ $order->total_price }} Tk.</td>
+            <td>{{ $order->amount }} Tk.</td>
             <td>{{ $order->first_name }}</td>
             <td>{{ $order->last_name }}</td>
             <td>{{ $order->address }}</td>
