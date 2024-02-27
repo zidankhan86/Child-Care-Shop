@@ -12,7 +12,7 @@ class HeroSectionCategory extends Component
     {
          //Category
          $categories = Category::latest()->limit(11)->get();
-         $subcategories = SubCategory::all();
+        
         return view('livewire.hero-section-category',compact('categories'));
     }
 }
