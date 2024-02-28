@@ -31,18 +31,22 @@
         </ul><br><br>
 
         <!-- Order History -->
-        {{-- <h3>Order History</h3>
+       
+        @foreach ($order as $item)
+<P>Order History</P>
+
         <ul style="list-style: none; padding: 0; text-align: left;">
             <li>
-                <strong>Order #12345</strong> - $50.00<br>
-                <span>Placed on: January 5, 2023</span>
+                <strong style="color: blue;">Product Name -</strong> - {{ $item->product->name }}<br>
+                <strong style="color: blue;">Order id: #{{ $item->amount }}{{ $item->id }}67890</strong><br>Price - BDT {{ $item->amount }}<br>
+                <span style="color: blue;">Placed on: {{ $item->created_at }}</span><br>
+                <strong style="color: blue;">Transaction No</strong> - {{ $item->transaction_id }}<br>
             </li>
-            <li>
-                <strong>Order #67890</strong> - $75.00<br>
-                <span>Placed on: February 15, 2023</span>
-            </li>
-            <!-- Add more order history entries here -->
-        </ul> --}}
+            <p style="color: blue;">Order Status -<small style="color: blue;">{{ $item->status }}</small></p>
+            
+       
+        </ul> <hr>
+        @endforeach
 
         <!-- Logout Button -->
 

@@ -23,7 +23,7 @@ class SslCommerzPaymentController extends Controller
     public function index(Request $request ,$id)
     {
         $product = Product::find($id);
-     
+        $user = auth()->user()->id;
 //dd($request->all());
         $post_data = array();
         $post_data['total_amount'] = $product->id; # You cant not pay less than 10
@@ -40,8 +40,9 @@ class SslCommerzPaymentController extends Controller
         $post_data['cus_state'] = "";
         $post_data['cus_postcode'] = $request->postcode;
         $post_data['cus_country'] = "Bangladesh";
-        $post_data['cus_phone'] = '8801XXXXXXXXX';
+        $post_data['cus_phone'] = $request->phone;
         $post_data['cus_fax'] = "";
+        $post_data['product_id'] = $product->id;
 
         # SHIPMENT INFORMATION
         $post_data['ship_name'] = "Store Test";
@@ -56,7 +57,7 @@ class SslCommerzPaymentController extends Controller
         $post_data['shipping_method'] = "NO";
         $post_data['product_name'] = $product->name;
         $post_data['product_category'] = "Goods";
-        $post_data['product_profile'] = "physical-goods";
+        $post_data['product_profile'] = auth()->user()->id;
 
         # OPTIONAL PARAMETERS
         $post_data['value_a'] = "ref001";
@@ -79,7 +80,9 @@ class SslCommerzPaymentController extends Controller
                 'postcode' => $post_data['cus_postcode'],
                 'transaction_id' => $post_data['tran_id'],
                 'currency' => $post_data['currency'],
-                'name' => $post_data['product_name']
+                'name' => $post_data['product_name'],
+                'user_id' => $post_data['product_profile'],
+                'product_id' => $post_data['product_id'],
             ]);
 
         $sslc = new SslCommerzNotification();

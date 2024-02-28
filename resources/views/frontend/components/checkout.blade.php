@@ -72,8 +72,8 @@
                                   <input type="text" placeholder="Apartment, suite, unite ect (optinal)" name="address">
 
                               </div>
-
-
+                              <input type="hidden" name="product_id" value="{{ $products->id }}">
+                              <input type="hidden" name="user_id" value="{{ $products->id }}">
                             <input type="hidden" name="total_price" value="{{ $products->id }}">
                             <input type="hidden" name="total_price" value="{{ $products->name }}">
                               <input type="hidden" name="total_price" value="{{ $subtotal }}">
