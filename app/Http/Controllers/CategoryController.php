@@ -87,5 +87,7 @@ class CategoryController extends Controller
         return back();
     }
    
-
+public function SubcategoryForm(){
+    return view('backend.pages.category.subCategory');
+}
 }
