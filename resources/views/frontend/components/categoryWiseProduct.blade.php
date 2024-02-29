@@ -12,6 +12,10 @@
             </div>
         </div>
         <div class="row featured__filter">
+       @if ($products->isEmpty())
+                       
+                    <p class="text-danger" style="text-align: center;">No products available at the moment.):</p>
+            @else
 
             @foreach ($products as $item)
 
@@ -65,8 +69,8 @@
 
             </div>
 
-            @endforeach
-
+            @endforeach  
+    @endif
         </div >
 
     </div>
