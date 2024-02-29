@@ -33,7 +33,7 @@
                             @auth
                             @if (auth()->user()->role == 'customer')
 
-                            <a href="{{ url('/profile') }}"> <div>Profile</div></a>
+                            <a href="{{ url('/profile') }}"> <div>Logged in as {{auth()->user()->name}}</div></a>
                             @endif
                             @endauth
 
