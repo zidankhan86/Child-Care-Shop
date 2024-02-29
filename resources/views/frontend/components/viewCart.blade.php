@@ -32,12 +32,20 @@
                                     {{$data['price']}} Tk.
                                 </td>
                                 <td class="shoping__cart__quantity">
-                                    <div class="quantity">
-                                        <div class="pro-qty">
-                                            <input type="text" value="{{$data['quantity']}}">
-                                        </div>
+                                <div class="quantity">
+                                    <div class="">
+                                    <form action="{{ route('update.cart') }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="product_id" value="{{ $key }}">
+                                            <input type="number" name="quantity" class="quantity-input" value="{{$data['quantity']}}" style="width: 50px; height: 20px; border: 1px solid black;">
+
+
+                                            <button class="text-info" type="submit">Update</button>
+                                        </form>
                                     </div>
+                                </div>
                                 </td>
+
                                 <td class="shoping__cart__total">
                                     {{$data['subtotal']}} Tk.
                                 </td>

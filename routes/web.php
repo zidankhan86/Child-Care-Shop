@@ -69,6 +69,7 @@ Route::get('add-to-cart/{id}',[AddToCartController::class,'addToCart'])->name('a
 Route::get('/view-cart',[AddToCartController::class,'viewCart']);
 Route::get('/clear-cart',[AddToCartController::class,'clearCart'])->name('cart.clear');
 Route::get('/cart-item/delete/{id}',[AddToCartController::class,'cartItemDelete'])->name('cart.item.delete');
+Route::post('update-cart', [AddToCartController::class, 'updateCart'])->name('update.cart');
 
  //Social share
 Route::get('/social-media-share', [SocialShareButtonsController::class,'ShareWidget']);
@@ -77,7 +78,7 @@ Route::get('/social-media-share', [SocialShareButtonsController::class,'ShareWid
 
 //Login
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [LoginController::class, 'loginProcess'])->name('login.submit');
+Route::post('/login-submit', [LoginController::class, 'loginProcess'])->name('login.submit');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //Registration
@@ -108,7 +109,7 @@ Route::get('/order/tracking/{id}',[OrderController::class,'orderTracking'])->nam
 });
 
 //middleware auth and admin
-Route::group(['middleware' => 'auth','admin','prefix'=>'admin'], function () {
+Route::group(['middleware' => 'admin','prefix'=>'admin'], function () {
 //Notification
 Route::get('/admin/notifications', [NotificationController::class, 'notifications'])->name('admin.notifications');
 
