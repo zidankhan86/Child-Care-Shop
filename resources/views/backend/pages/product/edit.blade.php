@@ -112,7 +112,7 @@
 
              <div class="mb-3 mx-sm-2">
             <label for="exampleInputNumber3" class="form-label">Shipping time</label>
-            <input type="date" class="form-control" id="datepicker" name="time"  value="{{$edit->time}}" placeholder="3 days in Dhaka..">
+            <input type="number" class="form-control" name="time"  value="{{$edit->time}}" placeholder="3 days in Dhaka..">
             @error('time')
 
                 <strong class="text-danger">{{$message}}</strong>

@@ -14,6 +14,7 @@
             <th scope="col">Serial</th>
             <th scope="col">Name</th>
             <th scope="col">Amount</th>
+            <th scope="col">Discount</th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">City</th>
@@ -35,6 +36,7 @@
             <th scope="row">{{ $id++ }}</th>
             <td>{{ $item->name }}</td>
             <td>{{ $item->amount }} Tk.</td>
+            <td>{{ $item->discounted_price }} Tk.</td>
             <td>{{ $item->first_name }}</td>
             <td>{{ $item->last_name }}</td>
             <td>{{ $item->address }}</td>

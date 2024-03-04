@@ -26,7 +26,8 @@ class SslCommerzPaymentController extends Controller
         $user = auth()->user()->id;
 //dd($request->all());
         $post_data = array();
-        $post_data['total_amount'] = $product->id; # You cant not pay less than 10
+        $post_data['total_amount'] = $product->price; # You cant not pay less than 10
+        $post_data['discount_price'] = $product->discounted_price;
         $post_data['currency'] = "BDT";
         $post_data['tran_id'] = uniqid(); // tran_id must be unique
 
@@ -74,6 +75,7 @@ class SslCommerzPaymentController extends Controller
                 'email' => $post_data['cus_email'],
                 'phone' => $post_data['cus_phone'],
                 'amount' => $post_data['total_amount'],
+                'discounted_price' => $post_data['discount_price'],
                 'status' => 'Pending',
                 'address' => $post_data['cus_add1'],
                 'city' => $post_data['cus_city'],

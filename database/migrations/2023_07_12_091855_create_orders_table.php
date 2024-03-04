@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('amount');
             $table->string('currency');
             $table->string('status');
+            $table->string('discounted_price')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->timestamp('created_at')->useCurrent();
