@@ -31,17 +31,17 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // AdminSeeder::class;
+         AdminSeeder::class;
         $this->call([
-            AdminSeeder::class,
-            CategorySeeder::class,
-            ProductSeeder::class,
-            TitleSeeder::class,
-            HeroSeeder::class,
-            FirstBanner::class,
-            SecondBannerSeeder::class,
-            LogoSeeder::class,
-            FAQSeeder::class
+            // AdminSeeder::class,
+            // CategorySeeder::class,
+            // ProductSeeder::class,
+            // TitleSeeder::class,
+            // HeroSeeder::class,
+            // FirstBanner::class,
+            // SecondBannerSeeder::class,
+            // LogoSeeder::class,
+            // FAQSeeder::class
             
         ]);
     }
