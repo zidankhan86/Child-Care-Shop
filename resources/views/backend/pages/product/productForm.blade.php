@@ -54,7 +54,7 @@
             </div>
 
             <div class="mb-3 col-md-6">
-                <label for="exampleInputInhouseStock" class="form-label">Stock</label>
+                <label for="exampleInputInhouseStock" class="form-label">Old Stock</label>
                 <input type="number" class="form-control" value="{{ old('stock') }}" id="exampleInputInhouseStock" name="stock" placeholder="70..">
                 @error('stock')
                 <div class="text-danger">{{ $message }}</div>
@@ -66,7 +66,7 @@
            
             <div class="mb-3 col-md-12">
                 <label for="exampleInputPrice" class="form-label">Price</label>
-                <input type="number" class="form-control" id="exampleInputPrice" value="{{ old('price') }}" name="price" placeholder="500..">
+                <input type="number" class="form-control" id="exampleInputPrice"  name="price" placeholder="500..">
                 @error('price')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror

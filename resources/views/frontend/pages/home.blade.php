@@ -6,8 +6,8 @@
 
  @include('frontend.components.navLayer')
  @include('frontend.components.hero')
- <livewire:trending-product/>
  @include('frontend.components.bannerOne')
+ <livewire:trending-product/>
  <livewire:latest-product/>
  @include('frontend.components.bannerTwo')
  @include('frontend.components.product')
