@@ -38,12 +38,13 @@
 
 
         <td>
-            <a href="{{route('contact.view' ,$item->id)}}" class="btn btn-warning"><i class="fas fa-envelope"></i> </a>
+            <a href="{{route('contact.view' ,$item->id)}}" class="btn btn-warning"><i class="fas fa-envelope"></i> 
+           
 
 
         </td>
         <td>
-            <a href="" class="btn btn-success"> <i class="fas fa-check"></i></a>
+        <a href="{{route('contact.delete' ,$item->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
         </td>
 
       </tr>
