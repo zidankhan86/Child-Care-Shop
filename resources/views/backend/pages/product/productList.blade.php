@@ -17,8 +17,7 @@
                                             <th scope="col"> Name</th>
                                             <th scope="col">Category</th>
                                             <th scope="col">Weight</th>
-                                            <th scope="col">Total Stock</th>
-                                            <th scope="col">Inhouse Stock</th>
+                                            <th scope="col">Stock</th>
                                             <th scope="col">Price</th>
                                             <th scope="col">Dicount</th>
                                             <th scope="col">Shipping</th>
@@ -42,7 +41,6 @@
         <td>{{ $item->name}}</td>
         <td>{{ $item->ProductCategory->type}}</td>
         <td>{{ $item->weight}} Kg</td>
-        <td>{{ $item->product_stock}}</td>
         <td>{{ $item->stock}}</td>
         <td>{{ $item->price}} Tk.</td>
         <td>{{ $item->discount}}.00%</td>
@@ -61,6 +59,10 @@
             
 
             <a href="{{route('product.delete',$item->id)}}" class="btn btn-danger" onclick="return confirm('Do you want to delete ?')"><i class="fas fa-trash"></i></a>
+
+            <a href="{{route('active.status',$item->id)}}" class="btn btn-info" onclick="return confirm('Do you want to make it active ?')">Active</a>
+
+            <a href="{{route('inactive.status',$item->id)}}" class="btn btn-warning" onclick="return confirm('Do you want to make it Inactive ?')">Inactive</a>
            
 
         </td>

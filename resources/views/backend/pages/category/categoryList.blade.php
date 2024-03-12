@@ -34,7 +34,11 @@
                             <td>{{ $item->status ? 'Active' : 'Inactive' }}</td>
                             <td>
                                 <a href="{{route('category.edit',$item->id)}}" class="btn btn-success"> <i class="fas fa-edit"></i></a>
+<<<<<<< HEAD
                                 <a href="#!php arti" class="btn btn-danger" onclick="return confirm('Sorry, You can not delete category!!!')">  <i class="fas fa-trash"></i></a>
+=======
+                                <a href="{{route('category.delete',$item->id)}}" class="btn btn-danger" onclick="return confirm('Warning, Product under category will be delete!!!')">  <i class="fas fa-trash"></i></a>
+>>>>>>> ef4c0771b85fb879e8f7e193fe1766ff0d8d0dfd
                             </td>
                         </tr>
                         @endforeach

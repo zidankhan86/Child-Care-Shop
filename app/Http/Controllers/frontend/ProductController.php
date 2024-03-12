@@ -12,6 +12,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\OrderReceivedNotification;
+use Jorenvh\Share\Share;
 
 class ProductController extends Controller
 {

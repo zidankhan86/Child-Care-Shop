@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id')->constrained('categories')->restrictOnDelete();
+            $table->unsignedBigInteger('category_id')->constrained('categories');
             $table->string('name');
             $table->string('image')->nullable();
             $table->float('weight');
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->boolean('status')->default(0);
 
 
-            $table->foreign('category_id')->references('id')->on('categories') ->restrictOnDelete();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

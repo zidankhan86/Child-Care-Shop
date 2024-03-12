@@ -83,7 +83,7 @@ class CategoryController extends Controller
     public function categordelete($id){
         $delete = Category::find($id);
         $delete->delete();
-
+        Alert::toast()->success('Category Deleted!!');
         return back();
     }
    

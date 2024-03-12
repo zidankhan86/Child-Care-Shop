@@ -197,4 +197,26 @@ class ProductController extends Controller
 
             }
 
+            public function active($id){
+                $product = Product::find($id);
+                $product->update([
+                    "status"=>"1"
+                ]);
+
+                Alert::toast()->success('Your status has been changed');
+                return redirect()->route('product.list');
+
+            }
+
+            public function inactive($id){
+                $product = Product::find($id);
+                $product->update([
+                    "status"=>"0"
+                ]);
+
+                Alert::toast()->success('Your status has been changed');
+                return redirect()->route('product.list');
+
+            }
+
             }

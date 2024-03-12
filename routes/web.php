@@ -139,6 +139,8 @@ Route::post('/product/rate/{id}', [ProductController::class,'storeRating'])->nam
 //Trending Products
 Route::get('/trending/product', [ProductController::class,'trendingProduct'])->name('trending.product');
 Route::get('/trending/status/{id}', [ProductController::class,'trendingStatus'])->name('trending.status');
+Route::get('/active/status/{id}', [ProductController::class,'active'])->name('active.status');
+Route::get('/inactive/status/{id}', [ProductController::class,'inactive'])->name('inactive.status');
 
 //Banner
 Route::get('/banner-form-one',[BannerController::class,'bannerFormOne'])->name('banner.form.one');
@@ -176,6 +178,7 @@ Route::get('/report/search',[ReportController::class,'reportSearch'])->name('ord
 
 Route::get('/contact-list',[ContactController::class,'contactlist'])->name('contact.list');
 Route::get('/contact-view/{id}',[ContactController::class,'contactview'])->name('contact.view');
+Route::get('/contact-delete/{id}',[ContactController::class,'contactDelete'])->name('contact.delete');
 
 //FAQ
 Route::resource('/faq',FAQController::class);

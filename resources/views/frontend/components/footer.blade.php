@@ -16,8 +16,8 @@
                     </div>
                     <ul>
                         
-                        <li>Phone: 01711111111</li>
-                        <li>Email:ChildCareShop@gmail.com</li>
+                        <li>Phone: 01679113991</li>
+                        <li>Email: sz.shuvom@gmail.com</li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="col-lg-12">
                 <div class="footer__copyright">
                     <div class="footer__copyright__text"><p>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  by ChildCareShop
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  by Pritom Chanda
                         </p></div>
                     <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
                 </div>

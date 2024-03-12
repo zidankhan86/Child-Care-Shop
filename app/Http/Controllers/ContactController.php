@@ -51,4 +51,11 @@ class ContactController extends Controller
         $messages = Contact::find($id);
         return view('backend.pages.feedback.feedbackView',compact('messages'));
     }
+
+    public function contactDelete($id){
+        $delete = Contact::find($id);
+        $delete->delete();
+        Alert::success('Feedback Deleted!!!.');
+        return redirect()->back();
+    }
 }
